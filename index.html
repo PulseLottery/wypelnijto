@@ -24,6 +24,7 @@
         }
         .container {
             width: 90%;
+            max-width: 1200px;
             margin: auto;
             overflow: hidden;
             padding: 20px 0;
@@ -31,7 +32,7 @@
         }
         .highlight {
             background: #ff7043;
-            color: #fff;
+            color: #000; /* Zmieniono kolor tekstu na czarny */
             padding: 20px;
             border-radius: 8px;
             margin: 20px auto;
@@ -40,7 +41,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .highlight a {
-            color: #fff;
+            color: #000; /* Zmieniono kolor linku na czarny */
             text-decoration: none;
             font-weight: bold;
         }
@@ -66,7 +67,7 @@
             margin: 8px;
             padding: 10px 15px;
             border-radius: 5px;
-            color: #fff;
+            color: #000; /* Zmieniono kolor tekstu na czarny */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s ease;
         }
@@ -84,18 +85,25 @@
             margin-top: 20px;
             font-size: 0.9em;
         }
+        /* Dodatkowe style responsywne */
+        @media (max-width: 768px) {
+            ul {
+                column-count: 1;
+            }
+            .highlight, li {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>WYPEŁNIJ TO - Poradnik wniosków</header>
 
     <div class="container">
-    <div class="highlight" style="color: black;">
-        <p>Masz pytania dotyczące wypełniania wniosków?</p>
-        <a href="https://m.me/kryptoemeryt" target="_blank" style="color: black;">Napisz do mnie na Messengerze</a>
-    </div>
-</div>
-
+        <div class="highlight">
+            <p>Masz pytania dotyczące wypełniania wniosków?</p>
+            <a href="https://m.me/kryptoemeryt" target="_blank">Napisz do mnie na Messengerze</a>
+        </div>
 
         <h1>Jak wypełnić wniosek?</h1>
         <p>Sprawdzone porady na temat wypełniania wniosków w Polsce i za granicą. Przyspiesz formalności i uniknij błędów!</p>
@@ -106,7 +114,7 @@
 
         <h2>Najczęściej wypełniane wnioski</h2>
         <ul>
-             <li>Wniosek o dowód osobisty</li>
+            <li>Wniosek o dowód osobisty</li>
             <li>Wniosek o paszport</li>
             <li>Wniosek o meldunek</li>
             <li>Wniosek o świadczenie 500+</li>
@@ -157,5 +165,9 @@
             <li>Wniosek o dodatek osłonowy</li>
         </ul>
     </div>
+
+    <footer>
+        &copy; 2024 WYPEŁNIJ TO. Wszelkie prawa zastrzeżone.
+    </footer>
 </body>
 </html>
